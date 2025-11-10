@@ -1,0 +1,29 @@
+{
+  "name": "lmarena-leaderboard-history",
+  "version": "0.0.1",
+  "description": "LMArena leaderboard history",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinschaul/lmarena-leaderboard-history.git"
+  },
+  "keywords": [
+    "git-scraping"
+  ],
+  "author": "Kevin Schaul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinschaul/lmarena-leaderboard-history/issues"
+  },
+  "homepage": "https://github.com/kevinschaul/lmarena-leaderboard-history#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "csv": "^6.2.0",
+    "got": "^11.8.5",
+    "lodash": "^4.17.21"
+  }
+}
