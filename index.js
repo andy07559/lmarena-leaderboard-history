@@ -14,7 +14,14 @@ const { isEqual, uniqWith, sortBy } = require("lodash");
 
     const header = $('[data-sentry-component="LeaderboardHeader"]');
     // Not the best selector, but it's the first mono text in the header
-    const date = header.find(".font-mono").eq(0).text();
+    const dateText = header.find(".font-mono").eq(0).text();
+
+    // Parse and format date to YYYY-MM-DD, fallback to raw text if parsing fails
+    let date = dateText;
+    const parsedDate = new Date(dateText);
+    if (!isNaN(parsedDate.getTime())) {
+      date = parsedDate.toISOString().split('T')[0];
+    }
 
     const rowItems = $(
       '[data-sentry-component="LeaderboardDataTable"] table tbody tr',
